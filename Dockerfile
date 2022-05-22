@@ -18,7 +18,7 @@ ENV LANG=C.UTF-8
 COPY test.sh /usr/local/bin/
 
 # App
-RUN dnf -y install nmap-ncat wget && \
+RUN dnf -y install nmap-ncat gzip wget && \
     dnf -y install libicu && \
     dnf clean all
 RUN wget -O /tmp/Lidarr.master.tar.gz "https://lidarr.servarr.com/v1/update/master/updatefile?os=linux&runtime=netcore&arch=x64" && \
